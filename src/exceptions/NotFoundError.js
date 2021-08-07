@@ -1,5 +1,5 @@
 /* eslint-disable require-jsdoc */
-import ClientError from './ClientError.js';
+const ClientError = require('./ClientError')
 
 class NotFoundError extends ClientError {
   constructor(message) {
@@ -8,4 +8,4 @@ class NotFoundError extends ClientError {
   }
 }
 
-export default NotFoundError;
+module.exports = NotFoundError

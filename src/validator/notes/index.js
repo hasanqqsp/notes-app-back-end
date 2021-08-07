@@ -1,5 +1,5 @@
-import NotePayloadSchema from './schema.js';
-import {InvariantError} from '../../exceptions/index.js';
+const NotePayloadSchema = require('./schema.js');
+const InvariantError = require('../../exceptions/InvariantError');
 
 const NotesValidator = {
   validateNotePayload: (payload) => {
@@ -9,5 +9,4 @@ const NotesValidator = {
     }
   },
 };
-
-export default NotesValidator;
+module.exports = NotesValidator

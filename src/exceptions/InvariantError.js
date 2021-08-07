@@ -1,5 +1,5 @@
 /* eslint-disable require-jsdoc */
-import ClientError from './ClientError.js';
+const ClientError = require('./ClientError')
 class InvariantError extends ClientError {
   constructor(message) {
     super(message);
@@ -7,4 +7,4 @@ class InvariantError extends ClientError {
   }
 }
 
-export default InvariantError;
+module.exports = InvariantError
