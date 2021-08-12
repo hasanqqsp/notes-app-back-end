@@ -126,12 +126,12 @@ class NotesHandler {
     try {
       const {id} = request.params;
       await this._service.deleteNoteById(id);
-      
+
       const response = h.response({
         status: 'success',
         message: 'Catatan berhasil dihapus',
       });
-      response.code(200)
+      response.code(200);
       return response;
     } catch (error) {
       if (error instanceof ClientError) {
